@@ -12,7 +12,7 @@ test.describe("Login functionality", () => {
     await expect(page.locator("//h1")).toHaveText("CURA Healthcare Service");
   });
   // Successful login
-  test("Should logic successfully", async ({ page }) => {
+  test("Should login successfully", async ({ page }) => {
     await page.getByRole("link", { name: "Make Appointment" }).click();
 
     await page.getByLabel("Username").fill("John Doe");
@@ -23,7 +23,7 @@ test.describe("Login functionality", () => {
   });
 
   // Unsuccessful login
-  test("Should not logic successfully", async ({ page }) => {
+  test("Should not login successfully", async ({ page }) => {
     await page.getByRole("link", { name: "Make Appointment" }).click();
 
     await page.getByLabel("Username").fill("John Doe");
