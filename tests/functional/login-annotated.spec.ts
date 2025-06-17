@@ -23,6 +23,14 @@ test.describe(
     test("Should login successfully", { tag: "@smoke" }, async ({ page }) => {
       await page.getByRole("link", { name: "Make Appointment" }).click();
 
+      // Adding a screenshot
+      const screenshot = await page.screenshot({ fullPage: true });
+      //Attach it to the test
+      await test.info().attach("Appt screenshot", {
+        body: screenshot,
+        contentType: "image/png",
+      }); // This usually sits in a helper file
+
       await page.getByLabel("Username").fill("John Doe");
       await page.getByLabel("Password").fill("ThisIsNotAPassword");
       await page.getByRole("button", { name: "Login" }).click();
