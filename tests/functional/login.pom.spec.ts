@@ -8,8 +8,18 @@ test.describe("Login functionality", () => {
     // Reading data from constants
     console.log(`>>> Data from constants file: ${JSON.stringify(constants)}`);
 
+    // Get data from .env file
+    const username = process.env.USERNAME;
+    const password = process.env.PASSWORD;
+    const URL = process.env.URL;
+
+    // Check for any error
+    if (!username || !password || !URL) {
+      throw new Error(">>> Error getting URL or User credentials...");
+    }
+
     const loginpage = new LoginPage(page); // Instance creation
-    await loginpage.launchHomePage("https://katalon-demo-cura.herokuapp.com/");
-    await loginpage.login("John Doe", "ThisIsNotAPassword");
+    await loginpage.launchHomePage(URL);
+    await loginpage.login(username, password);
   });
 });
