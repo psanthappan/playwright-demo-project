@@ -1,0 +1,22 @@
+{
+  "name": "playwright-demo-project",
+  "version": "1.0.0",
+  "description": "A demo repo",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psanthappan/playwright-demo-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psanthappan/playwright-demo-project/issues"
+  },
+  "homepage": "https://github.com/psanthappan/playwright-demo-project#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.53.0",
+    "@types/node": "^24.0.3"
+  }
+}
