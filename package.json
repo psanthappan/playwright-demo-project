@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "demo": "npx playwright test ./tests/functional/login.pom.spec.ts --headed",
-    "demo:api": "npx playwright test ./tests/api/basic-get-req.spec.ts",
+    "demo:api": "npx playwright test ./tests/api/oauth-example.spec.ts",
     "demo-3": "npx playwright test --grep=\"@smoke\" --headed",
     "demo-2": "npx playwright test ./tests/functional/login.spec.ts --headed",
     "demo-1": "npx playwright test ./tests/demo/my-first-test.spec.ts --headed"
