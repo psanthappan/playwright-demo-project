@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A demo repo",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "demo": "npx playwright test ./tests/demo/my-first-test.spec.ts --headed"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/psanthappan/playwright-demo-project.git"
